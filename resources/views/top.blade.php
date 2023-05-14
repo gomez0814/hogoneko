@@ -1,15 +1,19 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            保護猫カフェ一覧
+            トップページ
         </h2>
     </x-slot>
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900 dark:text-gray-100">
-                    保護猫カフェ一覧
+                <div class="p-6 text-gray-900 dark:text-gray-100 leading-10">
+                    <p>このサイトは、保護猫カフェを紹介するサイトです。</p>
+                    <p><a href="{{ route('cafes.list') }}" class="text-blue-500 underline">カフェリスト</a>より、お近くの保護猫カフェを探してみてください。</p>
+                    <p>今後はログイン機能を追加し、保護猫カフェのねこちゃんの情報などを掲示板のような形で皆様で共有できればと考えております。
+                    <p>少しでも保護猫活動をされる皆様のお力になれましたら幸いです。</p>
+                    <p class="text-right">管理人より</p>
                 </div>
             </div>
         </div>
