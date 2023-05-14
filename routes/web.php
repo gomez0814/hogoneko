@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CafeController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,6 +18,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('top');
 })->name('top');
+
+Route::get('/cafes', [CafeController::class, 'list'])->name('cafes.list');
+Route::get('/cafes/{id}', [CafeController::class, 'show'])->name('cafes.show');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
