@@ -19,14 +19,18 @@ class CafeFactory extends Factory
         return [
             'name' => fake()->company,
             'address' => fake()->address,
+            'prefecture' => fake()->prefecture,
             'business_hour' => '10:00 ~ 17:00',
             'holiday' => fake()->dayOfWeek,
+            'charge' => '1000円/時',
             'content' => fake()->text,
             'image_path' => fake()->imageUrl,
             'website' => fake()->url,
-            'twitter' => fake()->url,
+            'x' => fake()->url,
             'instagram' => fake()->url,
-            'youtube' => fake()->url
+            'youtube' => fake()->url,
+            'amazon' => fake()->url,
+            'admin' => fake()->text,
         ];
     }
 }

@@ -21,6 +21,7 @@ Route::get('/', function () {
 
 Route::get('/cafes', [CafeController::class, 'list'])->name('cafes.list');
 Route::get('/cafes/{id}', [CafeController::class, 'show'])->name('cafes.show');
+Route::post('/cafes', [CafeController::class, 'listByPrefecture'])->name('cafes.listByPrefecture');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

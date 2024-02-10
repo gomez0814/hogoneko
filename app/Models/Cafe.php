@@ -16,13 +16,18 @@ class Cafe extends Model
     protected $fillable = [
         'name',
         'address',
+        'prefecture',
         'business_hour',
         'holiday',
+        'charge',
         'content',
         'image_path',
         'website',
-        'twitter',
+        'x',
         'instagram',
-        'youtube'
+        'youtube',
+        'amazon',
+        'admin',
+        'map'
     ];
 }
