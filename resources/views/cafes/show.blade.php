@@ -13,9 +13,19 @@
                         <div class="h-10 w-1 bg-orange-300 mr-4"></div>
                         <h1 class="text-2xl font-bold">{{ $cafe->name }} の詳細情報</h1>
                     </div>
+
+                    {{-- 画像がある場合は表示 --}}
                     @if(isset($cafe->image_path))
-                        {{-- <img src="{{ $cafe->image_path }}" alt="Image"> --}}
+                        <!-- PC＆タブレット向け -->
+                        <div class="hidden sm:block">
+                            <img class="w-1/2 mx-auto mb-6" src="{{ $cafe->image_path }}" alt="Image">
+                        </div>                        
+                        {{-- スマホ向け --}}
+                        <div class="block sm:hidden">
+                            <img class="w-full mx-auto mb-6" src="{{ $cafe->image_path }}" alt="Image">
+                        </div>                        
                     @endif
+
                     <table class="w-full border">
                         <tbody>
                             <tr class="h-16">
@@ -73,7 +83,14 @@
                             <div class="h-10 w-1 bg-orange-300 mr-4"></div>
                             <h1 class="text-2xl font-bold">地図</h1>
                         </div>
-                        <iframe class="mt-6" src="{{ $cafe->map }}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <!-- GoogleMap（PC＆タブレット向け）-->
+                        <div class="hidden sm:block">
+                            <iframe class="mt-6 w-full" src="{{ $cafe->map }}" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>                        
+                        {{-- GoogleMap（スマホ向け）--}}
+                        <div class="block sm:hidden">
+                            <iframe class="mt-6 w-full" src="{{ $cafe->map }}" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
                     @endif
                 </div>
             </div>
