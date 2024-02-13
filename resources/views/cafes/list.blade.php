@@ -91,7 +91,7 @@
                             <thead>
                                 <tr>
                                     <th class="border w-10">No.</th>
-                                    <th class="border">店名</th>
+                                    <th class="border w-1/3">店名</th>
                                     <th class="border">住所</th>
                                 </tr>
                             </thead>
