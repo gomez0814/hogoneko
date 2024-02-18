@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             プライバシーポリシー
         </h2>
     </x-slot>
@@ -39,7 +39,8 @@
                     <p class="leading-loose mb-12">
                         このサイトで掲載している文章や画像などにつきましては、無断転載することを禁止します。
                         <br>
-                        このサイトは著作権や肖像権の侵害を目的としたものではありません。著作権や肖像権に関して問題がございましたら、Instagramアカウント等にご連絡ください。迅速に対応いたします。
+                        このサイトは著作権や肖像権の侵害を目的としたものではありません。著作権や肖像権に関して問題がございましたら、
+                        <a href="https://www.instagram.com/hogoneko_cafe_list" target="_blank" class="text-blue-500">Instagramアカウント</a>等にご連絡ください。迅速に対応いたします。
                     </p>
 
                     <div class="flex items-center mb-4">

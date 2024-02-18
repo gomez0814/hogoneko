@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             保護猫カフェの詳細情報
         </h2>
     </x-slot>
@@ -29,51 +29,51 @@
                         <table class="w-full border">
                             <tbody>
                                 <tr class="h-16">
-                                    <th class="px-2 border bg-gray-100">店名</th>
+                                    <th class="px-2 border bg-gray-100 dark:bg-gray-600">店名</th>
                                     <td class="px-2 border">{{ $cafe->name }}</td>
                                 </tr>
                                 <tr class="h-16">
-                                    <th class="px-2 border bg-gray-100">住所</th>
+                                    <th class="px-2 border bg-gray-100 dark:bg-gray-600">住所</th>
                                     <td class="px-2 border">{{ $cafe->address }}</td>
                                 </tr>
                                 <tr class="h-16">
-                                    <th class="px-2 border bg-gray-100">営業時間</th>
+                                    <th class="px-2 border bg-gray-100 dark:bg-gray-600">営業時間</th>
                                     <td class="px-2 border">{{ $cafe->business_hour }}</td>
                                 </tr>
                                 <tr class="h-16">    
-                                    <th class="px-2 border bg-gray-100">休業日</th>
+                                    <th class="px-2 border bg-gray-100 dark:bg-gray-600">休業日</th>
                                     <td class="px-2 border">{{ $cafe->holiday }}</td>
                                 </tr>
                                 <tr class="h-16">    
-                                    <th class="px-2 border bg-gray-100">料金</th>
+                                    <th class="px-2 border bg-gray-100 dark:bg-gray-600">料金</th>
                                     <td class="px-2 border">{{ $cafe->charge }}</td>
                                 </tr>
                                 <tr class="h-16">
-                                    <th class="px-2 border bg-gray-100">情報</th>
+                                    <th class="px-2 border bg-gray-100 dark:bg-gray-600">情報</th>
                                     <td class="px-2 border">{{ $cafe->content }}</td>
                                 </tr>
                                 <tr class="h-16">
-                                    <th class="px-2 border bg-gray-100">Webサイト</th>
+                                    <th class="px-2 border bg-gray-100 dark:bg-gray-600">Webサイト</th>
                                     <td class="px-2 border text-blue-500"><a href="{{ $cafe->website }}">{{ $cafe->website }}</td>
                                 </tr>
                                 <tr class="h-16">
-                                    <th class="px-2 border bg-gray-100">X（旧Twitter）</th>
+                                    <th class="px-2 border bg-gray-100 dark:bg-gray-600">X（旧Twitter）</th>
                                     <td class="px-2 border text-blue-500"><a href="{{ $cafe->x }}">{{ $cafe->x }}</td>
                                 </tr>
                                 <tr class="h-16">
-                                    <th class="px-2 border bg-gray-100">Instagram</th>
+                                    <th class="px-2 border bg-gray-100 dark:bg-gray-600">Instagram</th>
                                     <td class="px-2 border text-blue-500"><a href="{{ $cafe->instagram }}">{{ $cafe->instagram }}</td>
                                 </tr>
                                 <tr class="h-16">
-                                    <th class="px-2 border bg-gray-100">YouTube</th>
+                                    <th class="px-2 border bg-gray-100 dark:bg-gray-600">YouTube</th>
                                     <td class="px-2 border text-blue-500"><a href="{{ $cafe->youtube }}">{{ $cafe->youtube }}</td>
                                 </tr>
                                 <tr class="h-16">
-                                    <th class="px-2 border bg-gray-100">Amazonほしいものリスト</th>
+                                    <th class="px-2 border bg-gray-100 dark:bg-gray-600">Amazonほしいものリスト</th>
                                     <td class="px-2 border text-blue-500"><a href="{{ $cafe->amazon }}">{{ $cafe->amazon }}</td>
                                 </tr>
                                 <tr class="h-16">
-                                    <th class="px-2 border bg-gray-100">管理者より</th>
+                                    <th class="px-2 border bg-gray-100 dark:bg-gray-600">管理者より</th>
                                     <td class="px-2 border">{{ $cafe->admin }}</td>
                                 </tr>
                             </tbody>
