@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             保護猫カフェ一覧
         </h2>
     </x-slot>
@@ -16,7 +16,7 @@
                             <div class="h-10 w-1 bg-orange-300 mr-4"></div>
                             <p class="text-2xl font-bold">{{ $prefecture }} の保護猫カフェ一覧</p>
                         </div>
-                        <p class="ml-6">都道府県で検索したい場合は、こちらから選択してください。</p>
+                        <p>都道府県で検索したい場合は、こちらから選択してください。</p>
                     
                     {{-- 都道府県が選択されていない場合（初期表示） --}}
                     @elseif(count($cafes) !== 0)
@@ -24,7 +24,7 @@
                             <div class="h-10 w-1 bg-orange-300 mr-4"></div>
                             <p class="text-2xl font-bold">全ての保護猫カフェ一覧</p>
                         </div>
-                        <p class="ml-6">都道府県で検索したい場合は、こちらから選択してください。</p>
+                        <p>都道府県で検索したい場合は、こちらから選択してください。</p>
                     
                     {{-- 都道府県が選択されたが表示件数が0件の場合 --}}
                     @else
@@ -33,7 +33,7 @@
                     
                     <form action="{{ route('cafes.listByPrefecture') }}" method="POST">
                         @csrf
-                        <select class="my-4 ml-6" name="prefecture" onchange="this.form.submit()">
+                        <select class="my-4 dark:bg-gray-800 dark:border-gray-100" name="prefecture" onchange="this.form.submit()">
                             <option value="" selected>都道府県を選択</option>
                             <option value="全て">全て</option>
                             <option value="北海道">北海道</option>
@@ -86,7 +86,7 @@
                         </select>
                     </form>
                     @if(count($cafes) !== 0)
-                        <p class="mt-8 ml-6">店名をクリックすると詳細情報ページが表示されます。</p>
+                        <p class="mt-8">店名をクリックすると詳細情報ページが表示されます。</p>
                         <table class="w-full border my-4">
                             <thead>
                                 <tr>
