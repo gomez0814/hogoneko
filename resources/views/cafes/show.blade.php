@@ -15,7 +15,7 @@
                     </div>
 
                     {{-- 画像がある場合は表示 --}}
-                    @if(isset($cafe->image_path))
+                    @if(!empty($cafe->image_path))
                         <!-- PC＆タブレット向け -->
                         <div class="hidden sm:block">
                             <img class="w-1/2 mx-auto mb-6" src="{{ $cafe->image_path }}" alt="Image">
@@ -38,48 +38,48 @@
                                 </tr>
                                 <tr class="h-16">
                                     <th class="px-2 border bg-gray-100 dark:bg-gray-600">営業時間</th>
-                                    <td class="px-2 border">{{ $cafe->business_hour }}</td>
+                                    <td class="px-2 border">{!! nl2br(e($cafe->business_hour)) !!}</td>
                                 </tr>
                                 <tr class="h-16">    
                                     <th class="px-2 border bg-gray-100 dark:bg-gray-600">休業日</th>
-                                    <td class="px-2 border">{{ $cafe->holiday }}</td>
+                                    <td class="px-2 border">{!! nl2br(e($cafe->holiday)) !!}</td>
                                 </tr>
                                 <tr class="h-16">    
                                     <th class="px-2 border bg-gray-100 dark:bg-gray-600">料金</th>
-                                    <td class="px-2 border">{{ $cafe->charge }}</td>
+                                    <td class="px-2 border">{!! nl2br(e($cafe->charge)) !!}</td>
                                 </tr>
                                 <tr class="h-16">
                                     <th class="px-2 border bg-gray-100 dark:bg-gray-600">情報</th>
-                                    <td class="px-2 border">{{ $cafe->content }}</td>
+                                    <td class="px-2 border">{!! nl2br(e($cafe->content)) !!}</td>
                                 </tr>
                                 <tr class="h-16">
                                     <th class="px-2 border bg-gray-100 dark:bg-gray-600">Webサイト</th>
-                                    <td class="px-2 border text-blue-500"><a href="{{ $cafe->website }}">{{ $cafe->website }}</td>
+                                    <td class="px-2 border text-blue-500"><a href="{{ $cafe->website }}" target="_blank">{{ $cafe->website }}</td>
                                 </tr>
                                 <tr class="h-16">
                                     <th class="px-2 border bg-gray-100 dark:bg-gray-600">X（旧Twitter）</th>
-                                    <td class="px-2 border text-blue-500"><a href="{{ $cafe->x }}">{{ $cafe->x }}</td>
+                                    <td class="px-2 border text-blue-500"><a href="{{ $cafe->x }}" target="_blank">{{ $cafe->x }}</td>
                                 </tr>
                                 <tr class="h-16">
                                     <th class="px-2 border bg-gray-100 dark:bg-gray-600">Instagram</th>
-                                    <td class="px-2 border text-blue-500"><a href="{{ $cafe->instagram }}">{{ $cafe->instagram }}</td>
+                                    <td class="px-2 border text-blue-500"><a href="{{ $cafe->instagram }}" target="_blank">{{ $cafe->instagram }}</td>
                                 </tr>
                                 <tr class="h-16">
                                     <th class="px-2 border bg-gray-100 dark:bg-gray-600">YouTube</th>
-                                    <td class="px-2 border text-blue-500"><a href="{{ $cafe->youtube }}">{{ $cafe->youtube }}</td>
+                                    <td class="px-2 border text-blue-500"><a href="{{ $cafe->youtube }}" target="_blank">{{ $cafe->youtube }}</td>
                                 </tr>
                                 <tr class="h-16">
                                     <th class="px-2 border bg-gray-100 dark:bg-gray-600">Amazonほしいものリスト</th>
-                                    <td class="px-2 border text-blue-500"><a href="{{ $cafe->amazon }}">{{ $cafe->amazon }}</td>
+                                    <td class="px-2 border text-blue-500"><a href="{{ $cafe->amazon }}" target="_blank">{{ $cafe->amazon }}</td>
                                 </tr>
                                 <tr class="h-16">
                                     <th class="px-2 border bg-gray-100 dark:bg-gray-600">管理者より</th>
-                                    <td class="px-2 border">{{ $cafe->admin }}</td>
+                                    <td class="px-2 border">{!! nl2br(e($cafe->admin)) !!}</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                    @if(isset($cafe->map))
+                    @if(!empty($cafe->map))
                         <div class="flex items-center mt-16">
                             <div class="h-10 w-1 bg-orange-300 mr-4"></div>
                             <h1 class="text-2xl font-bold">地図</h1>
