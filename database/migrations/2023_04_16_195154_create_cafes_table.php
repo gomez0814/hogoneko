@@ -16,9 +16,9 @@ return new class extends Migration
             $table->string('name', 50);
             $table->string('address', 50);
             $table->string('prefecture', 10);
-            $table->string('business_hour', 50)->nullable();
-            $table->string('holiday', 50)->nullable();
-            $table->string('charge', 50)->nullable();
+            $table->string('business_hour', 1000)->nullable();
+            $table->string('holiday', 1000)->nullable();
+            $table->string('charge', 1000)->nullable();
             $table->string('content', 1000)->nullable();
             $table->string('image_path', 1000)->nullable();
             $table->string('website', 1000)->nullable();
