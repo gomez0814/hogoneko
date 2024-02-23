@@ -87,6 +87,7 @@
                     </form>
                     @if(count($cafes) !== 0)
                         <p class="mt-8">店名をクリックすると詳細情報ページが表示されます。</p>
+                        <p>※情報が古くなっている等により、誤りがある場合もございます。あらかじめご了承ください。</p>
                         
                         <!-- PC＆タブレット向け -->
                         <div class="hidden sm:block">
@@ -101,7 +102,7 @@
                                 <tbody>
                                     @foreach ($cafes as $cafe)
                                         <tr>
-                                            <td class="border-b px-4 py-4 text-blue-500"><a href="{{ route('cafes.show', ['id' => $cafe->id]) }}">{{ $cafe->name }}</a></td>
+                                            <td class="border-b px-4 py-4 text-blue-500"><a class="hover:text-orange-300" href="{{ route('cafes.show', ['id' => $cafe->id]) }}">{{ $cafe->name }}</a></td>
                                             <td class="border-b px-8 py-4">{{ $cafe->address }}</td>
                                             <td class="border-b px-8 py-4"><p class="leading-loose">{!! nl2br(e($cafe->business_hour)) !!}</p></td>
                                         </tr>
