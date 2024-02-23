@@ -62,6 +62,11 @@
                         <br>
                         修正された最新のプライバシーポリシーは常に本ページにて開示されます。
                     </p>
+
+                    {{-- 戻るボタン --}}
+                    <div class="flex justify-center">
+                        <button type="button" class="text-white rounded bg-orange-500 hover:bg-orange-700 px-5 py-2.5 mt-8" onClick="history.back()">戻る</button>
+                    </div>
                 </div>
             </div>
         </div>
