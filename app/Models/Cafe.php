@@ -28,6 +28,8 @@ class Cafe extends Model
         'youtube',
         'amazon',
         'admin',
-        'map'
+        'map',
+        'created_at',
+        'updated_at'
     ];
 }
