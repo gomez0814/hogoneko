@@ -31,39 +31,39 @@
                         <table class="w-full">
                             <tbody>
                                 <tr>
-                                    <th class="px-2 py-4 border-y bg-orange-50 dark:bg-gray-600 whitespace-nowrap">店名</th>
-                                    <td class="px-2 py-4 border-y">{{ $cafe->name }}</td>
+                                    <th class="px-2 py-4 border bg-orange-50 dark:bg-gray-600 whitespace-nowrap">店名</th>
+                                    <td class="px-2 py-4 border">{{ $cafe->name }}</td>
                                 </tr>
                                 <tr>
-                                    <th class="px-2 py-4 border-y bg-orange-50 dark:bg-gray-600">住所</th>
-                                    <td class="px-2 py-4 border-y">{{ $cafe->address }}</td>
+                                    <th class="px-2 py-4 border bg-orange-50 dark:bg-gray-600">住所</th>
+                                    <td class="px-2 py-4 border">{{ $cafe->address }}</td>
                                 </tr>
                                 <tr>
-                                    <th class="px-2 py-4 border-y bg-orange-50 dark:bg-gray-600">営業時間</th>
-                                    <td class="px-2 py-4 border-y"><p class="leading-loose">{!! nl2br(e($cafe->business_hour)) !!}</p></td>
+                                    <th class="px-2 py-4 border bg-orange-50 dark:bg-gray-600">営業時間</th>
+                                    <td class="px-2 py-4 border"><p class="leading-loose">{!! nl2br(e($cafe->business_hour)) !!}</p></td>
                                 </tr>
                                 <tr>    
-                                    <th class="px-2 py-4 border-y bg-orange-50 dark:bg-gray-600">休業日</th>
-                                    <td class="px-2 py-4 border-y"><p class="leading-loose">{!! nl2br(e($cafe->holiday)) !!}</p></td>
+                                    <th class="px-2 py-4 border bg-orange-50 dark:bg-gray-600">休業日</th>
+                                    <td class="px-2 py-4 border"><p class="leading-loose">{!! nl2br(e($cafe->holiday)) !!}</p></td>
                                 </tr>
                                 <tr>    
-                                    <th class="px-2 py-4 border-y bg-orange-50 dark:bg-gray-600">料金</th>
-                                    <td class="px-2 py-4 border-y"><p class="leading-loose">{!! nl2br(e($cafe->charge)) !!}</p></td>
+                                    <th class="px-2 py-4 border bg-orange-50 dark:bg-gray-600">料金</th>
+                                    <td class="px-2 py-4 border"><p class="leading-loose">{!! nl2br(e($cafe->charge)) !!}</p></td>
                                 </tr>
                                 <tr>
-                                    <th class="px-2 py-4 border-y bg-orange-50 dark:bg-gray-600">その他</th>
-                                    <td class="px-2 py-4 border-y"><p class="leading-loose">{!! nl2br(e($cafe->content)) !!}</p></td>
+                                    <th class="px-2 py-4 border bg-orange-50 dark:bg-gray-600">その他</th>
+                                    <td class="px-2 py-4 border"><p class="leading-loose">{!! nl2br(e($cafe->content)) !!}</p></td>
                                 </tr>
                                 @if(!empty($cafe->admin))
                                     <tr>
-                                        <th class="px-2 py-4 border-y bg-orange-50 dark:bg-gray-600">管理者より</th>
-                                        <td class="px-2 py-4 border-y"><p class="leading-loose">{!! nl2br(e($cafe->admin)) !!}</p></td>
+                                        <th class="px-2 py-4 border bg-orange-50 dark:bg-gray-600">管理者より</th>
+                                        <td class="px-2 py-4 border"><p class="leading-loose">{!! nl2br(e($cafe->admin)) !!}</p></td>
                                     </tr>
                                 @endif
                             </tbody>
                             <tr>
-                                <th class="px-2 py-4 border-y bg-orange-50 dark:bg-gray-600">リンク</th>
-                                <td class="px-2 py-4 border-y">
+                                <th class="px-2 py-4 border bg-orange-50 dark:bg-gray-600">リンク</th>
+                                <td class="px-2 py-4 border">
                                     {{-- リンクボタン --}}
                                     @if(!empty($cafe->website))
                                         <a href="{{ $cafe->website }}" target="_blank">
