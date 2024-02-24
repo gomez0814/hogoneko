@@ -126,7 +126,7 @@
                                 <tbody>
                                     @foreach ($cafes as $cafe)
                                         <tr>
-                                            <td class="border-b px-2 py-4 text-blue-500"><a href="{{ route('cafes.show', ['id' => $cafe->id]) }}">{{ $cafe->name }}</a></td>
+                                            <td class="border-b px-2 py-4 text-blue-500"><a class="hover:text-orange-300" href="{{ route('cafes.show', ['id' => $cafe->id]) }}">{{ $cafe->name }}</a></td>
                                             <td class="border-b px-2 py-4">{{ $cafe->address }}</td>
                                         </tr>
                                     @endforeach
