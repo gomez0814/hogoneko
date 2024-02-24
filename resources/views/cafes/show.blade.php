@@ -27,7 +27,7 @@
                     @endif
 
                     @if(!empty($cafe->updated_at))
-                        <p class="text-right">最終更新日:{{ \Carbon\Carbon::parse($cafe->updated_at)->format('Y年m月d日') }}</p>
+                        <p class="text-right mb-2">最終更新日:{{ \Carbon\Carbon::parse($cafe->updated_at)->format('Y年m月d日') }}</p>
                     @endif
 
                     {{-- 情報テーブル --}}
