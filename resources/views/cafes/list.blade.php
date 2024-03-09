@@ -1,4 +1,13 @@
 <x-app-layout>
+
+    <x-slot name="title">
+        @if(isset($prefecture))
+            {{ $prefecture }}の保護猫カフェ一覧
+        @else
+            全ての保護猫カフェ一覧
+        @endif
+    </x-slot>
+    
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             保護猫カフェ一覧
@@ -16,7 +25,11 @@
                             <div class="h-10 w-1 bg-orange-300 mr-4"></div>
                             <p class="text-2xl font-bold">{{ $prefecture }}の保護猫カフェ一覧</p>
                         </div>
-                        <p>都道府県で検索したい場合は、こちらから選択してください。</p>
+                        <p class="leading-loose">
+                            保護猫カフェの情報を表示します。
+                            <br>
+                            都道府県で検索したい場合は、こちらから選択してください。
+                        </p>
                     
                     {{-- 都道府県が選択されていない場合（初期表示） --}}
                     @elseif(count($cafes) !== 0)
@@ -24,15 +37,18 @@
                             <div class="h-10 w-1 bg-orange-300 mr-4"></div>
                             <p class="text-2xl font-bold">全ての保護猫カフェ一覧</p>
                         </div>
-                        <p>都道府県で検索したい場合は、こちらから選択してください。</p>
+                        <p class="leading-loose">
+                            保護猫カフェの情報を表示します。
+                            <br>
+                            都道府県で検索したい場合は、こちらから選択してください。
+                        </p>
                     
                     {{-- 都道府県が選択されたが表示件数が0件の場合 --}}
                     @else
                         <p class="text-red-500 my-4">「{{ $prefecture }}」の保護猫カフェは未登録でした。他の県を選択してください。</p>
                     @endif
                     
-                    <form action="{{ route('cafes.listByPrefecture') }}" method="POST">
-                        @csrf
+                    <form action="{{ route('cafes.list') }}" method="GET">
                         <select class="my-4 dark:bg-gray-800 dark:border-gray-100 rounded" name="prefecture" onchange="this.form.submit()">
                             <option value="" selected>都道府県を選択</option>
                             <option value="全て">全て</option>
@@ -85,6 +101,7 @@
                             <option value="沖縄県">沖縄県</option>
                         </select>
                     </form>
+                    
                     @if(count($cafes) !== 0)
                         <p class="mt-8 leading-loose">
                             店名をクリックすると詳細情報が表示されます。
