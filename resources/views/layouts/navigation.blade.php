@@ -24,6 +24,16 @@
                         保護猫カフェ一覧
                     </x-nav-link>
                 </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('donation.list')" :active="request()->routeIs('donation.list')">
+                        寄付先一覧
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('sns.list')" :active="request()->routeIs('sns.list')">
+                        SNS検索
+                    </x-nav-link>
+                </div>
             </div>
 
             <!-- Settings Dropdown -->
@@ -94,6 +104,16 @@
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('cafes.list')" :active="request()->routeIs('cafes.list')">
                 保護猫カフェ一覧
+            </x-responsive-nav-link>
+        </div>
+        <div class="pt-2 pb-3 space-y-1">
+            <x-responsive-nav-link :href="route('donation.list')" :active="request()->routeIs('donation.list')">
+                寄付先一覧
+            </x-responsive-nav-link>
+        </div>
+        <div class="pt-2 pb-3 space-y-1">
+            <x-responsive-nav-link :href="route('sns.list')" :active="request()->routeIs('sns.list')">
+                SNS検索
             </x-responsive-nav-link>
         </div>
 
