@@ -106,9 +106,7 @@
                         <p class="mt-8 leading-loose">
                             店名をクリックすると詳細情報が表示されます。
                             <br>
-                            Amazonほしいものリストボタンをクリックすると、その保護猫カフェのAmazonほしいものリストページが表示されます。
-                            <br>
-                            ※情報が古くなっている等により、誤りがある場合もございます。あらかじめご了承ください。
+                            Amazonボタンをクリックすると、その保護猫カフェのAmazonほしいものリストページが表示されます。
                         </p>
                         
                         <!-- PC＆タブレット向け -->
@@ -127,7 +125,7 @@
                                             <td class="border-b px-8 py-4">
                                                     <a href="{{ $cafe->amazon }}" target="_blank">
                                                     <button type="button" class="text-sm text-white rounded bg-amber-500 hover:bg-amber-700 px-5 py-2.5">
-                                                    Amazonほしいものリスト</button></a>
+                                                    Amazon</button></a>
                                             </td>
                                         </tr>
                                     @endforeach
@@ -151,7 +149,7 @@
                                             <td class="border-b px-2 py-4">
                                                     <a href="{{ $cafe->amazon }}" target="_blank">
                                                     <button type="button" class="text-sm text-white rounded bg-amber-500 hover:bg-amber-700 px-5 py-2.5">
-                                                    Amazonほしいものリスト</button></a>
+                                                    Amazon</button></a>
                                             </td>
                                         </tr>
                                     @endforeach
